@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layout.base')
 
-@section('content')
+@section('title', "Detalle")
+
+@section('main_content')
   <h2>{{ $product->name }}</h2>
 	@if ( session('errorDeleted') )
 		<div class="alert alert-danger">

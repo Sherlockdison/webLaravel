@@ -87,7 +87,22 @@ img{
 		border: 2px solid;
 		padding: 7px !important;
 	}
+/* clases de shop products */
 
+.shop-products{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3%;
+}
+
+.shop-products li {
+	width: 30%;
+	padding: 1%;
+}
+.title-shop{
+	display: flex;
+	justify-content: center;
+}
 /*------moBile menos de 640px--------*/
 
 /*-------------------INDEX---------------*/

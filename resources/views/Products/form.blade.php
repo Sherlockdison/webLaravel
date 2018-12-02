@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layout.base')
 
-@section('content')
+@section('title', 'Crear Producto')
+
+@section('main_content')
   <h1>Creando un Producto</h1>
 
   @if (count($errors) > 0)

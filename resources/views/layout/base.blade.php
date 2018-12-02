@@ -10,9 +10,9 @@
 	<body class=@yield('name')>
 		@include('layout.navbar')
 
-		<div class="container">
+		{{-- <div class="container"> --}}
 			@yield('main_content')
-		</div>
+		{{-- </div> --}}
 
     @include('layout.footer')
 	</body>

@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layout.base')
 
-@section('content')
+@section('title', 'Editar Producto')
+
+@section('main_content')
 
   <h2>Editando Producto <strong>--{{$product->name}}--</strong></h2>
 

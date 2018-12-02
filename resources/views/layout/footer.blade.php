@@ -9,14 +9,14 @@
         <section class="link-footer1">
           <ul>
             <li><a class="link-nav-" href="{{ route('home') }}">inicio</a></li>
-            <li><a class="link-nav" href="#">perfil</a></li>
+            <li><a class="link-nav" href="{{ route('profile') }}">perfil</a></li>
             <li><a class="link-nav" href="{{ route('products.index')}}">tienda</a></li>
           </ul>
         </section>
 
         <section class="link-footer2">
           <ul>
-            <li><a class="" href="#">preguntas frecuentes</a></li>
+            <li><a class="" href="{{ route('faq')}}">preguntas frecuentes</a></li>
             <li><a class="" href="{{ route('login')}}">logueate</a></li>
             <li><a class="" href="{{ route('register')}}">registráte</a></li>
           </ul>
