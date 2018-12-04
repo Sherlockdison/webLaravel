@@ -11,8 +11,6 @@
     <li><a class="link-nav-" href="{{ route('home') }}">Inicio</a></li>
     <li><a class="link-nav" href="{{ route('faq') }}">Preguntas Frecuentes</a></li>
     <li><a class="link-nav" href="{{ route('products.index')}}">Tienda</a></li>
-  </ul>
-  <ul class="controlsUser">
       @guest
         <li><a href="{{ route('login')}}">{{__('Logueate')}}</a></li>
           <li>

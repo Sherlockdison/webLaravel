@@ -28,7 +28,6 @@ text-align: -webkit-match-parent;
 
 a {
 	text-decoration: none;
-	width: 100%;
 }
 
 footer {
@@ -38,6 +37,9 @@ footer {
 }
 img{
 	width: 100%;
+}
+.es30 {
+	width: 33%;
 }
 
 		/* clases de error en formularios */
@@ -92,10 +94,10 @@ img{
 .shop-products{
 	display: flex;
 	flex-wrap: wrap;
-	padding: 3%;
+	justify-content: center;
 }
 
-.shop-products li {
+.product {
 	width: 30%;
 	padding: 1%;
 }
@@ -103,6 +105,43 @@ img{
 	display: flex;
 	justify-content: center;
 }
+.contCrear {
+	margin: 2em;
+}
+.titleProduts {
+	font-size: 3em;
+	display: flex;
+	justify-content: center;
+}
+
+.desciptionProduct h2 {
+	margin: 0.9em;
+	padding: 1em;
+	border: 1px solid rgb(0, 0, 0);
+	}
+
+.desciptionProduct p {
+	margin: 0.9em;
+	padding: 1em;
+	border: 1px solid rgb(0, 0, 0);
+	}
+.formImg {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 50%;
+	margin: 0.9em;
+	padding: 0.7em;
+	border-radius: 5%;
+	}
+
+.formButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0.9em;
+}
+
 /*------moBile menos de 640px--------*/
 
 /*-------------------INDEX---------------*/
