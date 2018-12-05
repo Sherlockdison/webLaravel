@@ -43,9 +43,12 @@
     </a>
   </div>
 </div>
-
 <div class="contCrear">
-  <a href="/products/create" class="btn btn-secondary btn-lg btn-block" >crear producto</a>
+  {{-- @guest
+
+  @else --}}
+      <a href="/products/create" class="btn btn-secondary btn-lg btn-block" >crear producto</a>
+  {{-- @endguest --}}
   <h2 class="titleProduts">Productos  <span>({{ $allProducts }})</span></h2>
 </div>
 
