@@ -3,7 +3,7 @@
       <h6>info@cenit.com</h6>
        <br>
         <h2>Newslleter</h2>
-        <a href="#"><img src="/storage/stylePage/images/newsletter.png" alt="newslleter"></a>
+        <a href="#"><img src="/images/newsletter.png" alt="newslleter"></a>
         </section>
 
         <section class="link-footer1">
@@ -24,10 +24,10 @@
 
         <section class="social-footer">
           <ul>
-            <li><a href="https://www.instagram.com/"><img src="/storage/stylePage/images/icon_instagram.png"></a></li>
-            <li><a href="https://www.facebook.com/"><img src="/storage/stylePage/images/icon_facebook.png"></a></li>
-            <li><a href="https://twitter.com/"><img src="/storage/stylePage/images/icon_twitter.png"></a></li>
-            <li><a href="https://www.youtube.com/"><img src="/storage/stylePage/images/icon_youtube.png"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="/images/icon_instagram.png"></a></li>
+            <li><a href="https://www.facebook.com/"><img src="/images/icon_facebook.png"></a></li>
+            <li><a href="https://twitter.com/"><img src="/images/icon_twitter.png"></a></li>
+            <li><a href="https://www.youtube.com/"><img src="/images/icon_youtube.png"></a></li>
           </ul>
         </section>
         <div class="copyright">

@@ -1,6 +1,6 @@
 <header class=header-container>
  <section class=header-brand>
-    <a class="navbar-brand" href="/home"> <img src="/storage/stylePage/images/logo.jpg" alt="logotipo"></a>
+    <a class="navbar-brand" href="/home"> <img src="/images/logo.jpg" alt="logotipo"></a>
  </section>
 
 <nav class="navbar-nav">
@@ -37,7 +37,7 @@
             </div>
         </li>
       @endguest
-        <li	class="li-img"><a href="#"><img	class="shop-car"	src="/storage/stylePage/images/bag.svg"	alt="shop-car"></a></li>
+        <li	class="li-img"><a href="#"><img	class="shop-car"	src="/images/bag.svg"	alt="shop-car"></a></li>
   </ul>
 </nav>
 </header>

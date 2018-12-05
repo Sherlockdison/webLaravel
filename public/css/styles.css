@@ -9,7 +9,7 @@ body {
 
 .body-index {
 	font-family: 'Telex', sans-serif;
-	background-image: url('/storage/stylePage/images/background-image.png');
+	background-image: url('../images/background-image.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: left;
@@ -378,6 +378,7 @@ padding: 15px;
 		padding: inherit;
 		}
 	.header-brand img {
+		display: flex;
 		width: 100%;
 		padding: 5px;
 	}
@@ -556,60 +557,65 @@ padding: 15px;
 	.user-name{
 			text-align: center;
 	}
-
+}
 
 
 @media (min-width: 1000px) {
 		/*---------------------------Faq.php---------------------------*/
-
-.faq-container {
-display: flex;
-flex-wrap: wrap;
-}
-.question-container{
-	display: flex;
-	position: fixed;
-	width: 33.33%;
-	bottom: 429px;
-	left: 10px;
-}
-.answer-container{
-	width: 100%;
-	padding: 0% 0% 0% 35%;
-}
-.faq-container h2, h1 {
-	padding: 2% 0%;
-}
-.faq-container article {
-	padding: 2% 5% 0% 0%;
-}
-.faq-container p {
-	text-align: justify;
-}
-.question-container a {
-	color: #363636;
-}
+	.faq-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.question-container{
+		display: flex;
+		position: fixed;
+		width: 33.33%;
+		bottom: 429px;
+		left: 10px;
+	}
+	.answer-container{
+		width: 100%;
+		padding: 0% 0% 0% 35%;
+	}
+	.faq-container h2, h1 {
+		padding: 2% 0%;
+	}
+	.faq-container article {
+		padding: 2% 5% 0% 0%;
+	}
+	.faq-container p {
+		text-align: justify;
+	}
+	.question-container a {
+		color: #363636;
+	}
 
 	/* _____profile.php___________________________ */
 
-.allContainer{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-}
-.container-profile-img {
-	width: auto;
+	.allContainer{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.container-profile-img {
+		width: auto;
+	}
+
+	.user-profile-image {
+		width: auto;
+		border-radius: 50%;
+	}
+	.container-profile-data{
+		width: auto;
+		padding: 18% 0%;
+	}
+	.user-name{
+			text-align: center;
+	}
 }
 
-.user-profile-image {
-	width: auto;
-	border-radius: 50%;
-}
-.container-profile-data{
-	width: auto;
-	padding: 18% 0%;
-}
-.user-name{
-		text-align: center;
+
+.page-item.active .page-link {
+  background-color: red !important;
 }

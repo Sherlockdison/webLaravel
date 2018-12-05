@@ -24,13 +24,13 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="/storage/stylePage/images/carrousel/cenOne.jpg" alt="First slide">
+        <img class="d-block w-100" src="/images/carrousel/cenOne.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="/storage/stylePage/images/carrousel/cenTwo.jpg" alt="Second slide">
+        <img class="d-block w-100" src="/images/carrousel/cenTwo.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="/storage/stylePage/images/carrousel/cenThree.jpg" alt="Third slide">
+        <img class="d-block w-100" src="/images/carrousel/cenThree.jpg" alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -58,7 +58,7 @@
 @foreach ($products as $product)
 
   <div class="card" style="width: 20em; margin: 0.9em;">
-  <img class="card-img-top" src="{{$product->img1}}" alt="Card image cap">
+  <img class="card-img-top" src="/storage/products/{{$product->img1}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{ $product->name }}</h5>
     <p class="card-text">{{ $product->price }}</p>

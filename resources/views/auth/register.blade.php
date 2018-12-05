@@ -6,7 +6,7 @@
 
   <div class="container-page">
 	 <div class="container-img">
-		 <img src="/storage/stylePage/images/page-img/leaves.jpg"	class="page-img">
+		 <img src="/images/page-img/leaves.jpg"	class="page-img">
 	 </div>
 		   <div class="container-form" "register">
 			   <form method="post" action="{{ route('register') }}" enctype="multipart/form-data">

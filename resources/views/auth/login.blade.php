@@ -6,7 +6,7 @@
   <div class="container-page">
     <!-- side Image -->
 	  <div class="container-img">
-	  	<img src="/storage/stylePage/images/page-img/aquarium-01.jpg"	class="page-img">
+	  	<img src="/images/page-img/aquarium-01.jpg"	class="page-img">
 	  </div>
 		<!-- End side Image -->
 
