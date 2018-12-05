@@ -17,8 +17,15 @@
         <section class="link-footer2">
           <ul>
             <li><a class="" href="{{ route('faq')}}">preguntas frecuentes</a></li>
-            <li><a class="" href="{{ route('login')}}">logueate</a></li>
-            <li><a class="" href="{{ route('register')}}">registráte</a></li>
+          @guest
+            <li><a href="{{ route('login')}}">{{__('logueate')}}</a></li>
+            <li>
+              @if (Route::has('register'))
+                <a class="" href="{{ route('register')}}">registráte</a>
+              @endif
+            </li>
+          @endguest
+
           </ul>
         </section>
 

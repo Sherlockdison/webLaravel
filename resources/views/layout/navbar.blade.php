@@ -14,9 +14,9 @@
       @guest
         <li><a href="{{ route('login')}}">{{__('Logueate')}}</a></li>
           <li>
-          @if (Route::has('register'))
-            <a href="{{ route('register')}}">{{__('Registráte')}}</a>
-          @endif
+            @if (Route::has('register'))
+              <a href="{{ route('register')}}">{{__('Registráte')}}</a>
+            @endif
           </li>
       @else
         <li class="nav-item dropdown">
