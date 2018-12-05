@@ -1,9 +1,9 @@
 <footer>
-    <section class="footer-info">
-      <h6>info@cenit.com</h6>
-       <br>
-        <h2>Newslleter</h2>
-        <a href="#"><img src="/images/newsletter.png" alt="newslleter"></a>
+        <section class="footer-info">
+            <h6>cenit.indumento@gmail.com</h6>
+             <br>
+              <h2>Newslleter</h2>
+              <a href= "mailto:cenit.indumento@gmail.com"><img src="images/newsletter.png" alt="newslleter"></a>
         </section>
 
         <section class="link-footer1">
@@ -31,10 +31,10 @@
 
         <section class="social-footer">
           <ul>
-            <li><a href="https://www.instagram.com/"><img src="/images/icon_instagram.png"></a></li>
-            <li><a href="https://www.facebook.com/"><img src="/images/icon_facebook.png"></a></li>
-            <li><a href="https://twitter.com/"><img src="/images/icon_twitter.png"></a></li>
-            <li><a href="https://www.youtube.com/"><img src="/images/icon_youtube.png"></a></li>
+            <li><a href="https://www.instagram.com/_cenit"><img src="images/icon_instagram.png"></a></li>
+            <li><a href="https://www.facebook.com/cenit.arg"><img src="images/icon_facebook.png"></a></li>
+            <li><a href="https://twitter.com/"><img src="images/icon_twitter.png"></a></li>
+            <li><a href="https://www.youtube.com/"><img src="images/icon_youtube.png"></a></li>
           </ul>
         </section>
         <div class="copyright">
