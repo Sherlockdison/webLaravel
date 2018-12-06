@@ -23,7 +23,7 @@
 		{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 		<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 		<link rel="stylesheet" href="{{ asset('/css/styles.css') }}" title="default">
-		
+
 		<!-- favicon -->
 		<link rel="shortcut icon" href="{{ asset('/public/favicon.jpg') }}">
 	</head>
