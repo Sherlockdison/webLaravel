@@ -1,20 +1,12 @@
-
+// var declaration
 var inputEmail = document.querySelector('[name=email]');
 var inputPassword = document.querySelector('[name=password]');
 var theSubmitButton = document.querySelector('[type=submit]');
 var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 var regexNumber = /^[0-9]*$/;
 var theForm = document.querySelector('#contactForm');
-console.log(theForm);
 
-
-var theInputs = Array.from(theForm.elements);
-
-// leave out last form elements
-theInputs.pop(); // btn ver password
-theInputs.pop();// btn submit
-
-
+// function declaration
 function inputValidation () {
 
 	var errorTxt = this.parentElement.querySelector('span');
@@ -46,8 +38,10 @@ function emailValidation () {
 		errorTxt.innerText = '';
 	}
 }
+// EventListeners
 
-//Password ontime Validation
+// ontime Validation
+//Password
 inputPassword.addEventListener('blur', inputValidation);
 //Email ontime Validation
 inputEmail.addEventListener('keyup', emailValidation);
