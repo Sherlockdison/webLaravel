@@ -36,6 +36,13 @@ img{
 	width: 100%;
 }
 
+.container-page{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+}
+
 /* Body - HEADER */
 
 .header-container {
@@ -230,8 +237,12 @@ footer {
 	justify-content: center;
 	margin: 0.9em;
 }
+/* Mobile View.LOGIN & View.REGISTER */
+.container-img{
+	display: none;
+}
 
-/* View - PROFILE */
+/*  Mobile View.PROFILE */
 .container-user-profile {
 		width: 80%;
 		margin: auto;
@@ -267,13 +278,7 @@ footer {
 	.hide {
 		display: none;
 	}
-	.container-page{
-		width: 100%;
-		display: block;
-	}
-	.container-img{
-		display: none;
-	}
+
 	.container-form{
 		width: 100%;
 		display: inline-block;
@@ -355,7 +360,7 @@ footer {
 			color: #dc3545;
 		}
 
-/* MOBILE > 640 px */
+/* tablet > 640 px */
 @media (min-width: 640px) {
 
 /* Body.HEADER */
@@ -494,32 +499,30 @@ footer {
 		margin: 0 3.4%;
 	}
 
-/* View.LOGIN & View.REGISTER */
-
-	.container-page{
-		padding: 50px;
-		width: 800px;
-		margin: auto;
-		overflow: hidden;
-		height:auto;
-		margin-bottom: 30px;
+/* Tablet View.LOGIN & View.REGISTER */
+.container-page-login{
+	display: flex;
+	align-items:center;
+	}
+.container-img{
+	display: block;
+	width: 300px;
 	}
 
-	.container-img{
-		display: inline;
-	}
-	.container-img img {
-    border-style: none;
-    width: 100%;
-		margin-top: 30px;
-	}
+.container-img img {
+	border-style: none;
+	width: 100%;
+	margin-top: 30px;
+}
+.container-form{
+	width: 300px;
+	justify-content: center;
+}
+.long-form{
+	display: flex;
+	flex-wrap: wrap;
+}
 
-	.container-form{
-		width: 100%;
-		height: auto;
-		float: left;
-		margin: 0;
-	}
 
 	.form-body{
 		display: inline;
