@@ -3,83 +3,188 @@
 @section('title', 'Register')
 
 @section('main_content')
-
   <div class="container-page">
-	 <div class="container-img">
-		 <img src="/images/page-img/leaves.jpg"	class="page-img">
-	 </div>
-		   <div class="container-form" "register">
-			   <form method="post" action="{{ route('register') }}" enctype="multipart/form-data">
-             @csrf
-	        <h2>Registrate</h2>
-	        <p>Por favor llena este formulario <br> para crear una cuenta.</p>
+  		 <!-- Register-Form -->
+  		 <div class="container-form" "register">
+  			 <div class="container-form">
+  			    <!-- form header -->
+  			    <div class="form-header">
+  				    <h2>{{ __('Registrate') }}</h2>
+  				    <p>Por favor llena este formulario <br>para crear una cuenta.</p>
+  			    </div>
+            <!-- form body -->
+          	<div class="form-body">
+  						<form id="contactForm" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+  								@csrf
+              <!-- name input -->
+              <div class="input-container">
+                  		<label  for="name">  <b>{{ __('Nombre Completo') }}</b></label>
+  										<input id="name"
+  										 type="text"
+  										 class="formInput{{ $errors->has('name') ? ' is-invalid' : '' }}"
+  										 name="name"
+  										 value="{{ old('name') }}" required autofocus
+  										 placeholder="Juana Perez"
+  										 >
+  	                  <!-- name auth -->
+  										 <div>
+  												 @if ($errors->has('name'))
+  														 <span class="invalid-feedback" role="alert">
+  																 <strong>{{ $errors->first('name') }}</strong>
+  														 </span>
+  												 @endif
+  										 </div>
+  										<br>
+                      <!-- JS Validation Error Text -->
+                      <span class="errorText"></span>
+              </div>
+  						<!-- Create Username input -->
+              <div class="input-container">
+  										<label><b>Nombre de usuario</b></label>
+  										<input
+  										id="user_name"
+  										type="text"
+  										class="formInput{{ $errors->has('user_name') ? ' is-invalid' : '' }}"
+  										name="user_name"
+  									  value="{{ old('user_name') }}"
+                      placeholder="juanita"
+  										required>
+    										<!-- Username auth -->
+  								<div>
+  										@if ($errors->has('user_name'))
+  												<span class="invalid-feedback" role="alert">
+  														<strong>{{ $errors->first('user_name') }}</strong>
+  												</span>
+  										@endif
+  								</div>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
+  						<!-- Email input -->
+  						<div class="input-container">
+  									<label  for="email">  <b>{{ __('E-Mail') }}</b></label>
+  											<br>
+  									<input id="email"
+  											type="email"
+  											class="formInput{{ $errors->has('email') ? ' is-invalid' : '' }}"
+  											name="email"
+  											placeholder="juanita@gmail.com"
+  											value="{{ old('email') }}" required autofocus
+  											>
+  								<!-- Email auth -->
+  								<div>
+  									@if ($errors->has('email'))
+  											<span class="invalid-feedback" role="alert">
+  													<strong>{{ $errors->first('email') }}</strong>
+  											</span>
+  									@endif
+  								</div>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
+              <!-- Country select -->
+              <div class="input-container">
+                    <label for="country"><b>{{ __('Selecciona tu País') }}</b></label>
+                    <select id="country"
+                    class="countries formInput{{ $errors->has('country') ? ' is-invalid' : '' }}"
+                    name="country"
+                    value="{{ old('country') }}" required>
+                          <option class="select-option" value="">Elige uno</option>
+                    </select>
+                    <!-- country auth-->
+                <div>
+                    @if ($errors->has('country'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('country') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <!-- JS Validation Error Text -->
+                <span class="errorText"></span>
+                </div>
+                <!-- State select -->
+                <div class="input-container stateSelect hide">
+                  <!-- <div class="stateSelect hide"> -->
+                      <label for="state"><b>{{ __('Selecciona tu Provincia') }}</b></label>
+                      <select id="state"
+                      class="state" "formInput{{ $errors->has('State') ? ' is-invalid' : '' }}"
+                      name="state"
+                      value="{{ old('state') }}" required>
+                            <option class="select-option" value="">Elige una</option>
+                      </select>
+                  <!-- </div> -->
+                    <!-- state auth-->
+                  <div>
+                      @if ($errors->has('state'))
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $errors->first('state') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
+  						<!-- form Password input -->
+              <div class="input-container">
+                  <label for="password"><b>{{ __('Ingresa tu
+                    contraseña') }}</b></label>
+                      <br>
+                      <input id="password"
+                      type="password"
+                      class=
+                            "formInput{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                      name="password" required
+                      placeholder= "sólo letras y numeros"
+                      >
+                  <!-- form Password auth -->
+                  <div>
+                      @if ($errors->has('password'))
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $errors->first('password') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
 
-          <label for= "name"><b>{{ __('Nombre completo') }}</b></label>
-	 				<input id="name"	type="text"	placeholder="Nombre completo"	name="name" class="formInput {{ $errors->has('name') ? 'invalidInputBorder' : ''}}>"	value="{{ old('name') }}" required>
+                  <!-- form Confirm Password -->
+              <div class="input-container">
+  										<label for="password-confirm">
+                        <b>{{ __('Confirma tu contraseña') }}</b></label>
+                        <input id="password-confirm" type="password" class="formInput" name="password_confirmation" required>
+                        <br>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
+              <!-- image input -->
+              <div class="input-container">
+                <label for=""><b> Seleciona una imagen de perfil...</b></label>
+  								<div class="custom-file">
 
-            @if ($errors->has('name'))
-              <span class="invalidInput" role="alert">
-                 <strong>{{ $errors->first('name') }}</strong>
-              </span>
-            @endif
-              <br>
+  											<label class="custom-file-label" for="customFile" style="width: 90%;text-align: left; margin-left: 5%;"></label>
+  											<input type="file" class="formInput" id="customFile" name="avatar">
+  								</div>
+                  <!-- JS Validation Error Text -->
+                  <span class="errorText"></span>
+              </div>
+              <br><br>
+              <!-- End form body -->
+              <button type="button" class="cancelBtn">Cancelar</button>
+              <button type="submit" class="signupBtn">Registrarme</button>
+  					 	</form>
 
-          <label for="email"><b>{{ __('Correo electrónico:') }}</b></label>
-					<input id="email" type="text" placeholder="Ingresar email" name="email" class="formInput{{ $errors->has('email') ? ' invalidInputBorder' : '' }}"	value="{{ old('email') }}" required>
+              </div>
+                  <!-- side Image -->
+              <div class="container-img">
+                      <img src="images/page-img/leaves.jpg"	class="page-img">
+              </div>
+            <!-- end of side Image -->
+  		 	</div>
+  	    </div> <!-- end of Register-Form -->
+  </div>
+@endsection
 
-            @if ($errors->has('email'))
-              <span class="invalidInput" role="alert">
-                  <strong>{{ $errors->first('email') }}</strong>
-              </span>
-            @endif
-
-          <label for="user_name"><b>{{ __('Nombre de usuario') }}</b></label>
-					<input id="user_name" type="text"	placeholder="Nombre de usuario" name="user_name" class="formInput{{ $errors->has('user_name') ? ' invalidInputBorder' : '' }}" value="{{ old('user_name') }}" required>
-
-            @if ($errors->has('user_name'))
-              <span class="invalidInput" role="alert">
-                <strong>{{ $errors->first('user_name') }}</strong>
-              </span>
-            @endif
-
-					<label for="password"><b>{{ __('Password:') }}</b></label>
-					<input id="password"	type="password"	placeholder="Contraseña"	name="password"	class="formInput{{ $errors->has('password') ? ' invalidInputBorder' : '' }}" required>
-
-            @if ($errors->has('password'))
-                <span class="invalidInput" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-            @endif
-							<br>
-          <label for="password-confirm" ><b>{{ __('Repetir password:') }}</b></label>
-					<input id="password-confirm" type="password"	placeholder="Repetir password" name="password_confirmation" class="formInput" required>
-
-          	<br>
-
-					<label for="country"><b>{{ __('País de nacimiento:') }}</b></label>
-          <input id="country" type="text" class="formInput{{ $errors->has('country') ? 'invalidInputBorder' : '' }}" name="country" value="{{ old('country') }}" required>
-
-            @if ($errors->has('country'))
-              <span class="invalidInput" role="alert">
-                <strong>{{ $errors->first('country') }}</strong>
-              </span>
-            @endif
-
-									<br>
-
-    			<label><b>Imagen de perfil:</b></label>
-						<div class="custom-file">
-							<input id="customFile" type="file" class="customFileInput" name="avatar">
-								<label class="customFileLabel" for="customFile">Elija el archivo...</label>
-						</div>
-
-
-					<p>Creando una cuenta aceptas nuestras <a href="#" style="color:dodgerblue">Politicas de privacidad</a>.</p>
-
-          <button type="button" class="cancelBtn">{{__('Cancelar')}}</button>
-		      <button type="submit" class="signupBtn">{{__('Registrarme')}}</button>
-
-        </form>
-      </div>
- </div>
+@section ('page-scripts')
+  <script src="{{ asset('js/register.js') }}"></script>
 @endsection

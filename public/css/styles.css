@@ -43,6 +43,18 @@ img{
 }
 
 		/* clases de error en formularios */
+
+		.errorText {
+			color: #dc3545;
+		}
+
+		.error{
+			color: #dc3545;
+			border-color: #ff5858 !important;
+			padding: 6px;
+			margin-top: 5px;
+		}
+
 	.invalidInputBorder {
 		border-color: #ff5858 !important;
 		padding: 6px;
@@ -88,6 +100,9 @@ img{
 		right: 17px;
 		border: 2px solid;
 		padding: 7px !important;
+	}
+	.select {
+
 	}
 /* clases de shop products */
 
@@ -286,7 +301,9 @@ padding: 15px;
 }
 
 /*---------------------------FORM-----------------------------*/
-
+	.hide {
+		display: none;
+	}
 	.container-page{
 		width: 100%;
 		display: block;
@@ -305,10 +322,23 @@ padding: 15px;
 	}
 	.formInput {
 		border-color: black ;
+		border-width: 1px;
 		width: 90%;
 		padding: 6px;
 		margin: 5px 0px;
 	}
+	select {
+		border-color: black ;
+		border-width: 1px;
+		width: 90%;
+		padding: 6px;
+		margin: 5px 0px;
+	}
+
+	.select-option {
+		color: grey !important;
+	}
+
 	.signupBtn
 	{
 	border-color: black;
@@ -348,8 +378,7 @@ padding: 15px;
 
 	.user-profile-image{
 	  width: 50%;
-	  border-radius: 50%;
-	}
+		}
 	.container-profile-data{
 		text-align: center;
 		width: 100%;
@@ -523,20 +552,23 @@ padding: 15px;
 	.container-img{
 		display: inline;
 	}
-
 	.container-img img {
     border-style: none;
-    width: 50%;
+    width: 100%;
 		margin-top: 30px;
 	}
 
 	.container-form{
-		padding-top: 30px;
-		width: 50%;
+		width: 100%;
 		height: auto;
 		float: left;
 		margin: 0;
 	}
+
+	.form-body{
+		display: inline;
+	};
+
 	.registerTitle{
 		margin-top:  0px !important;
 	}
@@ -549,8 +581,7 @@ padding: 15px;
 
 	.user-profile-image {
 		width: auto;
-		border-radius: 50%;
-  }
+	  }
 	.container-profile-data{
 		width: auto;
   }
