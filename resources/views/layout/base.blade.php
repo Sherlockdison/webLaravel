@@ -19,5 +19,6 @@
 		{{-- </div> --}}
 
     @include('layout.footer')
+		@yield ('page-scripts')
 	</body>
 </html>
