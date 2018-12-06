@@ -5,7 +5,7 @@
             <h6>cenit.indumento@gmail.com</h6>
              <br>
               <h2>Newsletter</h2>
-              <a href= "mailto:cenit.indumento@gmail.com"><img src="images/newsletter.png" alt="newslleter"></a>
+              <a href= "mailto:cenit.indumento@gmail.com"><img src="images/newsletter.png" alt="newsletter"></a>
         </section>
 <!-- center -->
         <section class="link-footer1">
