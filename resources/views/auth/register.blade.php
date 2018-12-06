@@ -14,7 +14,7 @@
   			    </div>
             <!-- form body -->
           	<div class="form-body">
-  						<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+  						<form id="contactForm" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
   								@csrf
               <!-- name input -->
               <div class="input-container">
@@ -92,10 +92,10 @@
                 <div>
                     <label for="country"><b>{{ __('Selecciona tu País') }}</b></label>
                     <select id="country"
-                    class="countries" "formInput{{ $errors->has('country') ? ' is-invalid' : '' }}"
+                    class="countries formInput{{ $errors->has('country') ? ' is-invalid' : '' }}"
                     name="country"
                     value="{{ old('country') }}" required>
-                          <option value="">Elige uno</option>
+                          <option class="select-option" value="">Elige uno</option>
                     </select>
                 </div>
                   <!-- country auth-->
@@ -110,14 +110,14 @@
                 <span class="errorText"></span>
                 </div>
                 <!-- State select -->
-                <div class="input-container" "stateSelect" style="display:none;">
-                  <div>
+                <div class="input-container">
+                  <div class="stateSelect hide">
                       <label for="state"><b>{{ __('Selecciona tu Provincia') }}</b></label>
                       <select id="state"
                       class="state" "formInput{{ $errors->has('State') ? ' is-invalid' : '' }}"
-                      name="country"
+                      name="state"
                       value="{{ old('state') }}" required>
-                            <option value="">Elige una</option>
+                            <option class="select-option" value="">Elige una</option>
                       </select>
                   </div>
                     <!-- state auth-->
@@ -169,13 +169,16 @@
               </div>
               <!-- image input -->
               <div class="input-container">
+                <label for=""><b> Seleciona una imagen de perfil...</b></label>
   								<div class="custom-file">
-  											<label class="custom-file-label" for="customFile"><b> Seleciona una imagen de perfil...</b></label>
+
+  											<label class="custom-file-label" for="customFile" style="width: 90%;text-align: left; margin-left: 5%;"></label>
   											<input type="file" class="formInput" id="customFile" name="avatar">
   								</div>
                   <!-- JS Validation Error Text -->
                   <span class="errorText"></span>
               </div>
+              <br><br>
               <!-- End form body -->
               <button type="button" class="cancelBtn">Cancelar</button>
               <button type="submit" class="signupBtn">Registrarme</button>
@@ -193,5 +196,5 @@
 @endsection
 
 @section ('page-scripts')
-  <script src="{{ asset('js/login.js') }}"></script>
+  <script src="{{ asset('js/register.js') }}"></script>
 @endsection
