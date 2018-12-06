@@ -8,17 +8,29 @@ var theForm = document.querySelector('#contactForm');
 console.log(theForm);
 
 
-// capturamos todos los campos del formulario
 var theInputs = Array.from(theForm.elements);
 
-// sacamos los últimos elementos del array
+// leave out last form elements
 theInputs.pop(); // btn ver password
 theInputs.pop();// btn submit
 
 
+function inputValidation () {
 
-function validarCampo () {
-	// this = el input que recibe el evento
+	var errorTxt = this.parentElement.querySelector('span');
+
+	if (this.value.trim() === '') {
+			errorTxt.innerText = 'Este campo es obligatorio';
+
+		this.classList.add('error');
+	} else {
+		this.classList.remove('error');
+		errorTxt.innerText = '';
+	}
+}
+
+
+function emailValidation () {
 
 	var errorTxt = this.parentElement.querySelector('span');
 
@@ -29,32 +41,17 @@ function validarCampo () {
 	} else if (!regexEmail.test(this.value.trim())) {
 		this.classList.add('error');
 		errorTxt.innerText = 'Ingresá un formato de email valido';
-	} else {
+	} else{
 		this.classList.remove('error');
 		errorTxt.innerText = '';
 	}
 }
 
-
-theInputs.forEach(function (input) {
-	input.addEventListener('blur', validarCampo);
-});
-
-
-inputEmail.addEventListener('keyup', function () {
-		var errorTxt = this.parentElement.querySelector('span');
-
-		if (this.value.trim().length > 5) {
-		if (!regexEmail.test(this.value.trim())) {
-			this.classList.add('error');
-			errorTxt.innerText = 'Ingresá un formato de email valido';
-		} else {
-			errorTxt.innerText = '';
-			this.classList.remove('error');
-		}
-	}
-});
-
+//Password ontime Validation
+inputPassword.addEventListener('blur', inputValidation);
+//Email ontime Validation
+inputEmail.addEventListener('keyup', emailValidation);
+inputEmail.addEventListener('blur', emailValidation);
 
 // submit only full & valid fields
 theForm.addEventListener('submit', function (ev) {
