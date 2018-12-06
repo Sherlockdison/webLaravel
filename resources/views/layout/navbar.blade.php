@@ -1,3 +1,4 @@
+<!-- LAYOUT BLADE HEADER CONFIG -->
 <header class=header-container>
  <section class=header-brand>
     <a class="navbar-brand" href="/home"> <img src="/images/logo.jpg" alt="logotipo"></a>

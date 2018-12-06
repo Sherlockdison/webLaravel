@@ -1,0 +1,527 @@
+@import url('normalize.css');
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Telex', sans-serif;
+	}
+
+.body-index {
+	font-family: 'Telex', sans-serif;
+	background-image: url('../images/background-image.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+
+a {
+	text-decoration: none;
+}
+
+footer {
+	background-color: black;
+	width: 100%;
+
+}
+img{
+	width: 100%;
+}
+.es30 {
+	width: 33%;
+}
+.header-container {
+display: flex;
+flex-direction: column;
+background-color: black;
+padding: 15px;
+}
+
+.header-brand {
+	width: 100%;
+	background-color: black;
+	text-align: center;
+}
+
+.navbar-nav li {
+	width: 100%;
+	background-color: black;
+	padding: 15px;
+	text-align: center;
+	text-transform: uppercase;
+}
+	.navbar-nav a {
+		color: white;
+
+	}
+	.toggle-nav {
+	display: block;
+	width: 50px;
+	text-align: center;
+	background-color: white;
+	margin: 15px auto;
+	padding: 10px 0;
+	border-radius: 6px;
+	}
+	.shop-car {
+		width: 5%;
+	}
+	.imgNavProf{
+	border-radius: 50%;
+	width: 15% !important;
+	}
+	.nameUsNav{
+		text-transform: capitalize !important;
+		display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	}
+
+/*___________________body-index___________________*/
+
+.body-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.car-main {
+	width: 95%;
+	margin-top: 15px;
+}
+.car-main img {
+	width: 100%;
+	border: 2px solid black;
+}
+
+/*___________________footer___________________*/
+.footer-info {
+	display:  none;
+}
+.footer-info img {
+	width: 70%;
+}
+.link-footer1 {
+	width: 100%;
+	padding: 1.2%;
+	font-size: 2em;
+}
+.link-footer1 li {
+	width: 50%;
+	background-color: #fff;
+	padding: 1.2%;
+	text-align: left;
+ }
+ .link-footer1 a {
+	 color: #000;
+ }
+
+.link-footer2 {
+	width: 100%;
+	padding: 1.6%;
+	font-size: 1em;
+}
+.link-footer2 li {
+	display: flex;
+	background-color: #fff;
+	padding: 1%;
+	text-align: left;
+}
+.link-footer2 a {
+	color: #000;
+}
+.social-footer ul {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	width: 95%;
+}
+.copyright {
+	font-size: 1em;
+	text-align: right;
+	color: #555;
+	margin: 0 3.4%;
+}
+
+/*---------------------------Faq.php---------------------------*/
+
+.body-faq {
+	background-color: #fff;
+}
+.question-container{
+	display: none;
+}
+.answer-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.answer-container h2, h1 {
+	padding: 2% 3%;
+}
+.answer-container article {
+	padding: 1% 3%;
+}
+.answer-container p {
+	text-align: justify;
+}
+
+/*---------------------------FORM-----------------------------*/
+	.hide {
+		display: none;
+	}
+	.container-page{
+		width: 100%;
+		display: block;
+	}
+	.container-img{
+		display: none;
+	}
+	.container-form{
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		margin: 5%;
+	}
+	.container-form label{
+		padding-top: 2px;
+	}
+	.formInput {
+		border-color: black ;
+		border-width: 1px;
+		width: 90%;
+		padding: 6px;
+		margin: 5px 0px;
+	}
+	select {
+		border-color: black ;
+		border-width: 1px;
+		width: 90%;
+		padding: 6px;
+		margin: 5px 0px;
+	}
+
+	.select-option {
+		color: grey !important;
+	}
+
+	.signupBtn
+	{
+	border-color: black;
+	color: white;
+	background: black;
+	padding: 5px 10px;
+	margin-left: 10px;
+	}
+
+	.signupBtn:hover
+	{
+		border-color: grey;
+		color: white;
+		background: grey;
+
+	}
+	.cancelBtn {
+		border-color:black;
+		color: black;
+		background: white;
+		padding: 5px 10px;
+	}
+	/* _________________________________profile.php _______________________________________*/
+
+	.container-user-profile {
+		width: 80%;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.container-profile-img {
+		text-align: center;
+		width: auto;
+	}
+
+	.user-profile-image{
+	  width: 50%;
+		}
+	.container-profile-data{
+		text-align: center;
+		width: 100%;
+		margin-right: 20px;
+	}
+	.user-name{
+	    text-align: center;
+	}
+
+	.user-profile-options {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+/*---------------------------------Mobile + de 640px-------------------------------------*/
+
+@media (min-width: 640px) {
+
+/*___________________Header - NavBar___________________*/
+
+	.header-container {
+		background-color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: inherit;
+		padding: inherit;
+		}
+	.header-brand img {
+		display: flex;
+		width: 100%;
+		padding: 5px;
+	}
+	.header-brand {
+		display: flex;
+		align-items: center;
+		width: 10%;
+		text-align: center;
+		margin-left: 5%;
+	}
+	.toggle-nav {
+		display: none;
+	}
+	.navbar-nav {
+		display: flex;
+		width: 80%;
+	}
+	.navbar-nav ul {
+		display: flex !important;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+	}
+	.navbar-nav li {
+		display: flex;
+		justify-content: center;
+		background-color: #fff;
+		padding: 15px 5px 10px;
+	}
+	.navbar-nav a {
+		width: auto;
+		color: #000;
+		font-size: 1em;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.navbar-nav img {
+		width: 50%;
+	}
+
+	/*___________________body-index min 640px___________________*/
+
+	.body-main {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-end;
+		width: auto;
+	}
+	.car-main {
+		display: flex;
+		flex-flow: column wrap;
+		width: 40%;
+		padding: 10px;
+	}
+	.car-main img {
+		width: 100%;
+		border: 2px solid #fff;
+	}
+
+	/*___________________footer___________________*/
+
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.footer-info {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		display: inherit;
+		color: #5c5c5c;
+		width: 33.33%;
+		padding: 15px;
+	}
+	.footer-info a {
+		display: flex;
+		width: inherit;
+		flex-wrap: wrap;
+	}
+	.link-footer1{
+		width: 33.33%;
+		padding: 1.2%;
+		font-size: 2em;
+	}
+	.link-footer1 li {
+		width: 50%;
+		background-color: #fff;
+		padding: 1.2%;
+		text-align: left;
+	}
+	.link-footer1 a {
+		color: #000;
+	}
+
+	.link-footer2 {
+		width: 33.33%;
+		padding: 1.6%;
+		font-size: 1em;
+	}
+	.link-footer2 li {
+		display: flex;
+		background-color: #fff;
+		padding: 1%;
+		text-align: left;
+	}
+	.link-footer2 a {
+		color: #000;
+	}
+	.social-footer {
+		width: 100%;
+	}
+	.social-footer ul {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		width: 95%;
+	}
+	.copyright {
+		font-size: 1em;
+		text-align: right;
+		color: #555;
+		margin: 0 3.4%;
+	}
+
+
+/*--------------------------tablet y web--------------------------*/
+
+
+/*_______login.php && register.php__________________*/
+
+	.container-page{
+		padding: 50px;
+		width: 800px;
+		margin: auto;
+		overflow: hidden;
+		height:auto;
+		margin-bottom: 30px;
+	}
+
+	.container-img{
+		display: inline;
+	}
+	.container-img img {
+    border-style: none;
+    width: 100%;
+		margin-top: 30px;
+	}
+
+	.container-form{
+		width: 100%;
+		height: auto;
+		float: left;
+		margin: 0;
+	}
+
+	.form-body{
+		display: inline;
+	};
+
+	.registerTitle{
+		margin-top:  0px !important;
+	}
+
+	/* _____profile.php___________________________ */
+
+	.container-profile-img {
+		width: auto;
+	}
+
+	.user-profile-image {
+		width: auto;
+	  }
+	.container-profile-data{
+		width: auto;
+  }
+	.user-name{
+			text-align: center;
+	}
+}
+
+
+@media (min-width: 1000px) {
+		/*---------------------------Faq.php---------------------------*/
+	.faq-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.question-container{
+		display: flex;
+		position: fixed;
+		width: 33.33%;
+		bottom: 429px;
+		left: 10px;
+	}
+	.answer-container{
+		width: 100%;
+		padding: 0% 0% 0% 35%;
+	}
+	.faq-container h2, h1 {
+		padding: 2% 0%;
+	}
+	.faq-container article {
+		padding: 2% 5% 0% 0%;
+	}
+	.faq-container p {
+		text-align: justify;
+	}
+	.question-container a {
+		color: #363636;
+	}
+
+	/* _____profile.php___________________________ */
+
+	.allContainer{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.container-profile-img {
+		width: auto;
+	}
+
+	.user-profile-image {
+		width: auto;
+		border-radius: 50%;
+	}
+	.container-profile-data{
+		width: auto;
+		padding: 18% 0%;
+	}
+	.user-name{
+			text-align: center;
+	}
+}
+
+
+.page-item.active .page-link {
+  background-color: red !important;
+}
