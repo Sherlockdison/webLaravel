@@ -1,3 +1,4 @@
+<!-- PROFILE VIEW  -->
 @extends('layout.base')
 
 @section('title', 'Profile')

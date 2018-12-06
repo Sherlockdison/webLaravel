@@ -1,4 +1,5 @@
-@extends('layouts.app')
+<!-- SEND PASSWORD RESET LINK VIEW -->
+extends('layouts.app')
 
 @section('content')
 <div class="container">

@@ -1,3 +1,4 @@
+<!-- FAQ VIEW -->
 @extends('layout.base')
 
 @section('title', 'Cenit')

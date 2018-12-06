@@ -1,3 +1,4 @@
+<!-- HOME VIEW -->
 @extends('layout.base')
 
 @section('title', 'Cenit')
@@ -5,6 +6,8 @@
 @section('main_content')
 
 @section('name', 'body-index')
+
+<!-- image vertical carrousel -->
   <div class="body-main">
 
   				<article class="car-main">
@@ -41,6 +44,5 @@
   					<img src="/images/editorial/editorial-8-8.jpg">
 
   				</article>
-
 	</div>
 @endsection
