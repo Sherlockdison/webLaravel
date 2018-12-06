@@ -107,7 +107,7 @@
                   <!-- <div class="stateSelect hide"> -->
                       <label for="state"><b>{{ __('Selecciona tu Provincia') }}</b></label>
                       <select id="state"
-                      class="state" "formInput{{ $errors->has('State') ? ' is-invalid' : '' }}"
+                      class="state" "formInput{{ $errors->has('state') ? ' is-invalid' : '' }}"
                       name="state"
                       value="{{ old('state') }}" required>
                             <option class="select-option" value="">Elige una</option>
