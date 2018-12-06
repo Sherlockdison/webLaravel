@@ -52,14 +52,12 @@ theForm.addEventListener('submit', function (ev) {
 
 	if (
 			inputEmail.value.trim() === '' ||
-			!regexEmail.test(inputEmail.value.trim())
-			// inputPassword.value.trim() === '' ||
+			!regexEmail.test(inputEmail.value.trim()) ||
+			inputPassword.value.trim() === ''
 		) {
 
 		ev.preventDefault();
 		window.alert('Los campos están vacíos');
-		inputName.classList.add('error');
-		inputEmail.classList.add('error');
-		// theSubmitButton.setAttribute('disabled', 'true');
+		theSubmitButton.setAttribute('disabled', 'true');
 	}
 });

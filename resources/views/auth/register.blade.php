@@ -18,7 +18,6 @@
   								@csrf
               <!-- name input -->
               <div class="input-container">
-                <div>
                   		<label  for="name">  <b>{{ __('Nombre Completo') }}</b></label>
   										<input id="name"
   										 type="text"
@@ -27,8 +26,7 @@
   										 value="{{ old('name') }}" required autofocus
   										 placeholder="Juana Perez"
   										 >
-  								</div>
-                  <!-- name auth -->
+  	                  <!-- name auth -->
   										 <div>
   												 @if ($errors->has('name'))
   														 <span class="invalid-feedback" role="alert">
@@ -42,7 +40,6 @@
               </div>
   						<!-- Create Username input -->
               <div class="input-container">
-      						<div>
   										<label><b>Nombre de usuario</b></label>
   										<input
   										id="user_name"
@@ -52,8 +49,7 @@
   									  value="{{ old('user_name') }}"
                       placeholder="juanita"
   										required>
-  								</div>
-  										<!-- Username auth -->
+    										<!-- Username auth -->
   								<div>
   										@if ($errors->has('user_name'))
   												<span class="invalid-feedback" role="alert">
@@ -65,18 +61,17 @@
                   <span class="errorText"></span>
               </div>
   						<!-- Email input -->
-  						<div class="input-container">		<div>
+  						<div class="input-container">
   									<label  for="email">  <b>{{ __('E-Mail') }}</b></label>
   											<br>
-  											<input id="email"
+  									<input id="email"
   											type="email"
   											class="formInput{{ $errors->has('email') ? ' is-invalid' : '' }}"
   											name="email"
   											placeholder="juanita@gmail.com"
   											value="{{ old('email') }}" required autofocus
   											>
-  								</div>
-  										<!-- Email auth -->
+  								<!-- Email auth -->
   								<div>
   									@if ($errors->has('email'))
   											<span class="invalid-feedback" role="alert">
@@ -89,7 +84,6 @@
               </div>
               <!-- Country select -->
               <div class="input-container">
-                <div>
                     <label for="country"><b>{{ __('Selecciona tu País') }}</b></label>
                     <select id="country"
                     class="countries formInput{{ $errors->has('country') ? ' is-invalid' : '' }}"
@@ -97,8 +91,7 @@
                     value="{{ old('country') }}" required>
                           <option class="select-option" value="">Elige uno</option>
                     </select>
-                </div>
-                  <!-- country auth-->
+                    <!-- country auth-->
                 <div>
                     @if ($errors->has('country'))
                         <span class="invalid-feedback" role="alert">
@@ -110,8 +103,8 @@
                 <span class="errorText"></span>
                 </div>
                 <!-- State select -->
-                <div class="input-container">
-                  <div class="stateSelect hide">
+                <div class="input-container stateSelect hide">
+                  <!-- <div class="stateSelect hide"> -->
                       <label for="state"><b>{{ __('Selecciona tu Provincia') }}</b></label>
                       <select id="state"
                       class="state" "formInput{{ $errors->has('State') ? ' is-invalid' : '' }}"
@@ -119,7 +112,7 @@
                       value="{{ old('state') }}" required>
                             <option class="select-option" value="">Elige una</option>
                       </select>
-                  </div>
+                  <!-- </div> -->
                     <!-- state auth-->
                   <div>
                       @if ($errors->has('state'))
@@ -133,7 +126,6 @@
               </div>
   						<!-- form Password input -->
               <div class="input-container">
-  								<div>
                   <label for="password"><b>{{ __('Ingresa tu
                     contraseña') }}</b></label>
                       <br>
@@ -144,7 +136,6 @@
                       name="password" required
                       placeholder= "sólo letras y numeros"
                       >
-  								</div>
                   <!-- form Password auth -->
                   <div>
                       @if ($errors->has('password'))
@@ -159,11 +150,10 @@
 
                   <!-- form Confirm Password -->
               <div class="input-container">
-  								<div>
   										<label for="password-confirm">
                         <b>{{ __('Confirma tu contraseña') }}</b></label>
                         <input id="password-confirm" type="password" class="formInput" name="password_confirmation" required>
-  								</div>
+                        <br>
                   <!-- JS Validation Error Text -->
                   <span class="errorText"></span>
               </div>
