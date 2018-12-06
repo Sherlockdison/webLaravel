@@ -11,7 +11,7 @@
       	</div>
       @endif
       <h2>{{ $product->name }}</h2>
-      <img class="formImg" src="{{$product->img1}}" style="border-radius: 5%;">
+      <img class="formImg" src="/storage/products/{{$product->img1}}" style="border-radius: 5%;">
       <p><b>Descripción:</b> {{ $product->description }}</p>
       <p><b>Talla:</b> {{ $product->size->size}}</p>
       <p><b>Precio:</b> {{ $product->price }}</p>
