@@ -140,4 +140,22 @@ class ProductsController extends Controller
   		$product->img1 = $name;
   		$product->save();
   	}
+
+    public function search()
+    {
+
+   	  return view('products.search');
+
+    }
+
+    public function result(Request $request)
+    {
+
+    	$queryString = $request->searchProduct;
+
+    	$result = Product::where('name', 'LIKE', "%$queryString%")->get();
+
+    	return view('products.results')->with( compact('result', 'queryString') );
+
+    }
 }

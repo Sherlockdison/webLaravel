@@ -17,20 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//rutas con acceso para usuarios registrados
+
 Route::middleware('auth')->group(function() {
-	Route::get('/products/create', 'ProductsController@create')
-			->name('products.create');
-	Route::get('/products/{product}/edit', 'ProductsController@edit')
-			->name('products.edit');
-	Route::delete('/products/{product}', 'ProductsController@destroy')
-			->name('products.destroy');
+  Route::get('/products/create', 'ProductsController@create')
+  ->name('products.create');
+  Route::get('/products/{product}/edit', 'ProductsController@edit')
+  ->name('products.edit');
+  Route::delete('/products/{product}', 'ProductsController@destroy')
+  ->name('products.destroy');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/faq', 'HomeController@faq')->name('faq');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+Route::get('/products/search', 'ProductsController@search')->name('products.search');
+Route::get('/products/result', 'ProductsController@result')->name('products.result');
 Route::resource('users', 'UsersController');
 Route::resource('products', 'ProductsController')->except('create', 'edit', 'destroy');
 Route::resource('sizes', 'SizesController');
-Route::get('/faq', 'HomeController@faq')->name('faq');
-Route::get('/profile', 'HomeController@profile')->name('profile');
