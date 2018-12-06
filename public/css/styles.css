@@ -301,7 +301,9 @@ padding: 15px;
 }
 
 /*---------------------------FORM-----------------------------*/
-
+	.hide {
+		display: none;
+	}
 	.container-page{
 		width: 100%;
 		display: block;
@@ -331,6 +333,10 @@ padding: 15px;
 		width: 90%;
 		padding: 6px;
 		margin: 5px 0px;
+	}
+
+	.select-option {
+		color: grey !important;
 	}
 
 	.signupBtn
