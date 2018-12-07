@@ -14,7 +14,7 @@
 		<div class="profile-buttons">
 
 			<a class="btn btn-outline-dark fill"href="/products/create"> Crear producto </a>
-			<a class="btn btn-outline-dark fill"href="/products/create"> Buscar un producto </a>
+			<a class="btn btn-outline-dark fill"href="/products/search"> Buscar un producto </a>
 			<a class="btn btn-outline-dark fill "href="/products/create"> Stock Local </a>
 			<a class="btn btn-outline-dark fill"href="/products/create"> Ingresar Movimiento </a>
 		</div>

@@ -5,13 +5,16 @@
 @section('title', "Buscador")
 
 @section('main_content')
+<div class="container-search">
 
-  <h2>Buscar Productos </h2>
+
+  <h2 class="top-margin">Buscar Productos </h2>
+  <br><br>
 	<form action="/products/result" method="get">
 		<div class="form-group">
-			<input type="text" name="searchProduct" class="from-control">
-			<button type="submit" class="btn btn-info">Buscar</button>
+			<input type="text" name="searchProduct" class="formInput">
+			<button type="submit" class="signupBtn search-btn container-form">Buscar</button>
 		</div>
 	</form>
-
+</div>
 @endsection
