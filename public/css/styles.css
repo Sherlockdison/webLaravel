@@ -291,6 +291,10 @@ text-align: center;
 	text-align: center;
 	margin: 5%;
 }
+.container-form-auto{
+	width: auto;
+	justify-content: center;
+}
 .container-form label{
 	padding-top: 2px;
 }

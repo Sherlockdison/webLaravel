@@ -7,8 +7,8 @@
 
 <div class="container-page">
      <!-- Create product Form -->
-     <div class="container-form" "register">
-       <div class="container-form">
+     <div class="container-form-auto" "register">
+       <div class="container-form-auto">
           <!-- form header -->
           <div class="form-header">
   		      <h1> Producto Nuevo </h1>
