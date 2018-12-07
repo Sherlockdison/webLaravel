@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'country' => 'required',
+            'state' => 'string',
             'avatar' => 'mimes:jpeg,jpg,png',
         ]);
     }
@@ -86,6 +87,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
+            'state' => $data['state'],
             'avatar' => $name,
         ]);
     }
