@@ -29,7 +29,7 @@
 	</head>
 
 	<!-- body -->
-	<body class="@yield('name')">
+	<body class="@yield('name')" onload="set_style_from_cookie()">
 		<!-- header -->
 		@include('layout.navbar')
 
@@ -48,6 +48,9 @@
 							          $(".navbar-nav ul").slideToggle(350);
 		              });
 		        </script>
+						<script src="js/theme.js">
+
+						</script>
 		@yield ('page-scripts')
 	</body>
 </html>

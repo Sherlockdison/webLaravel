@@ -13,7 +13,7 @@
 			<img class="user-profile-image" src="/storage/users/images/{{Auth::user()->avatar}}">
 		</div>
 		<div class="profile-buttons">
-
+			
 			<a class="btn btn-outline-dark fill"href="/products/create"> Crear producto </a>
 			<a class="btn btn-outline-dark fill"href="/products/search"> Buscar un producto </a>
 			<a class="btn btn-outline-dark fill "href="/products/create"> Stock Local </a>

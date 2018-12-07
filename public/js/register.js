@@ -85,7 +85,9 @@ theForm.addEventListener('submit', function (ev) {
 		window.alert('Los campos están vacíos');
 		inputName.classList.add('error');
 		inputEmail.classList.add('error');
-		// theSubmitButton.setAttribute('disabled', 'true');
+		theSubmitButton.setAttribute('disabled', 'true');
+	} else {
+		theSubmitButton.setAttribute('enabled','true')
 	}
 });
 

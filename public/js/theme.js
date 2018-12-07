@@ -1,63 +1,54 @@
-// var declaration
-var inputEmail = document.querySelector('[name=email]');
-var inputPassword = document.querySelector('[name=password]');
-var theSubmitButton = document.querySelector('[type=submit]');
-var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-var regexNumber = /^[0-9]*$/;
-var theForm = document.querySelector('#contactForm');
+	var style_cookie_name = "style" ;
+	var style_cookie_duration = 30 ;
+	var style_domain = "http://localhost:8000/" ;
 
-// function declaration
-function inputValidation () {
 
-	var errorTxt = this.parentElement.querySelector('span');
-
-	if (this.value.trim() === '') {
-			errorTxt.innerText = 'Este campo es obligatorio';
-
-		this.classList.add('error');
-	} else {
-		this.classList.remove('error');
-		errorTxt.innerText = '';
+	function switch_style ( css_title )
+	{
+	  var i, link_tag ;
+	  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+	    i < link_tag.length ; i++ ) {
+	    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+	      link_tag[i].title) {
+	      link_tag[i].disabled = true ;
+	      if (link_tag[i].title == css_title) {
+	        link_tag[i].disabled = false ;
+	      }
+	    }
+	    set_cookie( style_cookie_name, css_title,
+	      style_cookie_duration, style_domain );
+	  }
 	}
-}
-
-
-function emailValidation () {
-
-	var errorTxt = this.parentElement.querySelector('span');
-
-	if (this.value.trim() === '') {
-			errorTxt.innerText = 'Este campo es obligatorio';
-
-		this.classList.add('error');
-	} else if (!regexEmail.test(this.value.trim())) {
-		this.classList.add('error');
-		errorTxt.innerText = 'Ingresá un formato de email valido';
-	} else{
-		this.classList.remove('error');
-		errorTxt.innerText = '';
+	function set_style_from_cookie()
+	{
+	  var css_title = get_cookie( style_cookie_name );
+	  if (css_title.length) {
+	    switch_style( css_title );
+	  }
 	}
-}
-// EventListeners
-
-// ontime Validation
-//Password
-inputPassword.addEventListener('blur', inputValidation);
-//Email ontime Validation
-inputEmail.addEventListener('keyup', emailValidation);
-inputEmail.addEventListener('blur', emailValidation);
-
-// submit only full & valid fields
-theForm.addEventListener('submit', function (ev) {
-
-	if (
-			inputEmail.value.trim() === '' ||
-			!regexEmail.test(inputEmail.value.trim()) ||
-			inputPassword.value.trim() === ''
-		) {
-
-		ev.preventDefault();
-		window.alert('Los campos están vacíos');
-		theSubmitButton.setAttribute('disabled', 'true');
+	function set_cookie ( cookie_name, cookie_value,
+	    lifespan_in_days, valid_domain )
+	{
+	      var domain_string = valid_domain ?
+	                       ("; domain=" + valid_domain) : '' ;
+	    document.cookie = cookie_name +
+	                       "=" + encodeURIComponent( cookie_value ) +
+	                       "; max-age=" + 60 * 60 *
+	                       24 * lifespan_in_days +
+	                       "; path=/" + domain_string ;
 	}
-});
+	function get_cookie ( cookie_name )
+	{
+	    // https://www.thesitewizard.com/javascripts/cookies.shtml
+		var cookie_string = document.cookie ;
+		if (cookie_string.length != 0) {
+			var cookie_array = cookie_string.split( '; ' );
+			for (i = 0 ; i < cookie_array.length ; i++) {
+				cookie_value = cookie_array[i].match ( cookie_name + '=(.*)' );
+				if (cookie_value != null) {
+					return decodeURIComponent ( cookie_value[1] ) ;
+				}
+			}
+		}
+		return '' ;
+	}
