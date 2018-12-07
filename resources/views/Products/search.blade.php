@@ -1,3 +1,5 @@
+<!-- SEARCH VIEW -->
+
 @extends('layout.base')
 
 @section('title', "Buscador")

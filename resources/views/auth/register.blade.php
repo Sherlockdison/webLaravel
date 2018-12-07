@@ -1,12 +1,19 @@
+<!-- REGISTER VIEW -->
 @extends('layout.base')
 
 @section('title', 'Register')
 
 @section('main_content')
   <div class="container-page">
+    <div class="container-page-login">
+      <!-- side Image -->
+      <div class="container-img">
+        <img src="images/page-img/leaves.jpg"	class="page-img">
+      </div>
+        <!-- end of side Image -->
   		 <!-- Register-Form -->
-  		 <div class="container-form" "register">
-  			 <div class="container-form">
+  		 <div class="container-form" "long-form">
+  			 <div class="container-form" >
   			    <!-- form header -->
   			    <div class="form-header">
   				    <h2>{{ __('Registrate') }}</h2>
@@ -173,15 +180,10 @@
               <button type="button" class="cancelBtn">Cancelar</button>
               <button type="submit" class="signupBtn">Registrarme</button>
   					 	</form>
-
               </div>
-                  <!-- side Image -->
-              <div class="container-img">
-                      <img src="images/page-img/leaves.jpg"	class="page-img">
-              </div>
-            <!-- end of side Image -->
   		 	</div>
   	    </div> <!-- end of Register-Form -->
+      </div>
   </div>
 @endsection
 

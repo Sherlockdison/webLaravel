@@ -1,3 +1,4 @@
+<!-- LARAVEL DEFAULT VIEW ----- ERRASE -->
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>

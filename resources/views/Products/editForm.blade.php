@@ -1,3 +1,4 @@
+<!-- EDIT PRODUCT -->
 @extends('layout.base')
 
 @section('title', 'Editar Producto')

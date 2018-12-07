@@ -1,3 +1,5 @@
+<!-- RESET PASSWORD VIEW  -->
+
 @extends('layout.base')
 
 @section('title', 'Verify')

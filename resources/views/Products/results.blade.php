@@ -1,3 +1,5 @@
+<!-- SEARCH RESULTS  -->
+
 @extends('layout.base')
 
 @section('title', "Resultados")

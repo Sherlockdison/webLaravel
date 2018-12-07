@@ -1,3 +1,4 @@
+<!-- RESET PASSWORD VIEW -->
 @extends('layouts.app')
 
 @section('content')

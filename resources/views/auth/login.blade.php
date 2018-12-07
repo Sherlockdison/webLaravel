@@ -1,10 +1,11 @@
+<!-- LOGIN VIEW  -->
 @extends('layout.base')
 
 @section('title', 'Login')
 
 @section('main_content')
 <div class="container-page">
-
+  <div class="container-page-login">
     <!-- side Image -->
       <div class="container-img">
             <img src="images/page-img/aquarium-01.jpg"	class="page-img">
@@ -44,7 +45,7 @@
             <!-- JS Validation Error Text -->
                 <span class="errorText"></span>
             </div>
-
+  </div>
 
             <!-- form Password input -->
             <div class="input-container">
