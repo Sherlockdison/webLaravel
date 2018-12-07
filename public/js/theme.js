@@ -39,7 +39,6 @@
 	}
 	function get_cookie ( cookie_name )
 	{
-	    // https://www.thesitewizard.com/javascripts/cookies.shtml
 		var cookie_string = document.cookie ;
 		if (cookie_string.length != 0) {
 			var cookie_array = cookie_string.split( '; ' );
