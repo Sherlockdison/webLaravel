@@ -9,6 +9,7 @@
       <!-- side Image -->
       <div class="container-img">
         <img src="images/page-img/leaves.jpg"	class="page-img">
+        <img src="images/page-img/thailand.JPG"	class="page-img">
       </div>
         <!-- end of side Image -->
   		 <!-- Register-Form -->
