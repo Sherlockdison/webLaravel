@@ -8,6 +8,9 @@
 
 
 <div class="container">
+  <div class="formButtons">
+    <a href="/products" class="btn btn-outline-dark es30">Atrás</a>
+  </div>
   <h2>Su busqueda con la palabra "{{$queryString}}", arrojo los siguientes resultados</h2>
   @forelse ($result as $product)
     <div class="card col-md-12">
