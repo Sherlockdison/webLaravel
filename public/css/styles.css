@@ -605,8 +605,6 @@ select {
 	/* View.PROFILE */
 
 
-
-
 	.page-item.active .page-link {
 		background-color: red !important;
 	}

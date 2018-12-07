@@ -58,7 +58,7 @@
 <!-- product catalog -->
   <div class="shop-products">
     @foreach ($products as $product)
-      <div class="card" style="width: 20em; margin: 0.9em;">
+      <div class="card formInput" style="width: 20em; margin: 0.9em;">
       <img class="card-img-top" src="/storage/products/{{$product->img1}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ $product->name }}</h5>
