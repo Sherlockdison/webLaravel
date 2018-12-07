@@ -26,13 +26,14 @@ Route::middleware('auth')->group(function() {
   ->name('products.edit');
   Route::delete('/products/{product}', 'ProductsController@destroy')
   ->name('products.destroy');
+  Route::get('/profile', 'HomeController@profile')->name('profile');
+
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/faq', 'HomeController@faq')->name('faq');
-Route::get('/profile', 'HomeController@profile')->name('profile');
 Route::get('/products/search', 'ProductsController@search')->name('products.search');
 Route::get('/products/result', 'ProductsController@result')->name('products.result');
 Route::resource('users', 'UsersController');

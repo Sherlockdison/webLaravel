@@ -4,6 +4,7 @@
 @section('title', 'Profile')
 
 @section('main_content')
+
 <div class="allContainer">
 	<h3 class=user-name >{{Auth::user()->name}}</h3>
 	<h4 class=user-data>{{Auth::user()->country}}</h4>
