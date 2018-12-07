@@ -4,23 +4,23 @@
 @section('title', 'Profile')
 
 @section('main_content')
-			<div class="allContainer">
-  <h3 class=user-name >{{Auth::user()->name}}</h3>
-    <h4 class=user-data>{{Auth::user()->country}}</h4>
+<div class="allContainer">
+	<h3 class=user-name >{{Auth::user()->name}}</h3>
+	<h4 class=user-data>{{Auth::user()->country}}</h4>
+	<div class="profile-content">
+		<div class="container-profile-img">
+			<img class="user-profile-image" src="/storage/users/images/{{Auth::user()->avatar}}">
+		</div>
+		<div class="profile-buttons">
 
-	<div class="container-profile-img">
-						<img class="user-profile-image" src="/storage/users/images/{{Auth::user()->avatar}}">
+			<a class="btn btn-outline-dark fill"href="/products/create"> Crear producto </a>
+			<a class="btn btn-outline-dark fill"href="/products/create"> Buscar un producto </a>
+			<a class="btn btn-outline-dark fill "href="/products/create"> Stock Local </a>
+			<a class="btn btn-outline-dark fill"href="/products/create"> Ingresar Movimiento </a>
+		</div>
 	</div>
-<div class="profile-buttons">
-
-  <a class="btn btn-outline-dark fill"href="/products/create"> Crear producto </a>
-  <a class="btn btn-outline-dark fill"href="/products/create"> Buscar un producto </a>
-  <a class="btn btn-outline-dark fill "href="/products/create"> Stock Local </a>
-  <a class="btn btn-outline-dark fill"href="/products/create"> Ingresar Movimiento </a>
 
 </div>
-
-         </div>
 
 
 

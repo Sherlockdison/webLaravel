@@ -523,12 +523,19 @@ select {
 
 	/* View.PROFILE*/
 
+.profile-content{
+	display: flex;
+	flex-direction: column-reverse;
+}
 	.container-profile-img {
-		width: auto;
+		width: 300px;
+		display: inline-block;
+		margin: auto;
+
 	}
 
 	.user-profile-image {
-		width: auto;
+		width: 100%;
 	}
 	.container-profile-data{
 		width: auto;
@@ -536,6 +543,14 @@ select {
 	.user-name{
 		text-align: center;
 	}
+
+.profile-buttons{
+	display: flex;
+	flex-direction: row;
+
+}
+.profile-buttons a .fill {
+		width: auto;
 }
 
 /* MOBILE > 960 px */
